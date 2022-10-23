@@ -1,0 +1,53 @@
+\documentclass[one]{article}
+\usepackage[margin=2.54cm]{geometry}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\begin{document}
+
+\tableofcontents
+
+\section{Idea}
+
+This project is to formalize much of the high school mathematics curriculum in cohesive homotopy type theory. This includes the theory of equations in the real numbers, elementary functions over the real numbers, and analytic Euclidean planar and volumetric geometry, as well as miscellaneous topics such as elementary combinatorics, number theory, probability, and statistics. 
+
+We work in cohesive homotopy type theory rather than plain homotopy type theory, because major topics in high school geometry, such as the perimeter and area of planar geometric figures, requires proving theorems about the topological properties of the real numbers, subtypes of the Euclidean plane, and continuous functions thereof. Due to the synthetic treatment of topological spaces and continuous functions in cohesive homotopy type theory, the proofs in cohesive homotopy type theory tend to be shorter than in plain homotopy type theory: whereas in plain homotopy type theory the theorems need to be appended with statements that types have the proper topology based off the Euclidean metric, and functions are continuous in a suitable way, in cohesive homotopy type theory, all types which are cohesive already have the proper topology, and all functions which are elements of cohesive function types are already continuous. 
+
+\section{Foundations and synthetic topology}
+
+\begin{itemize}
+\item homotopy type theory, with an inductive identity type which only satisfies propositional identity elimination. This is so that the statements here are valid in all of Martin-Löf type theory, cubical type theory, and higher observational type theory. 
+
+\item the theory of univalent Tarski universes, propositional resizing, and modalities
+
+\item the Tarski universes $(U_\mathrm{crisp}, T_\mathrm{crisp})$ representing crisp types and $(U_\mathrm{cohesive}, T_\mathrm{cohesive})$ representing cohesive types, as well as functions 
+$$\mathrm{disc}:U_\mathrm{crisp} \to U_\mathrm{cohesive}$$ 
+$$\mathrm{codisc}:U_\mathrm{crisp} \to U_\mathrm{cohesive}$$
+$$\mathrm{underlying}:U_\mathrm{cohesive} \to U_\mathrm{crisp}$$ 
+$$\mathrm{fundamental}:U_\mathrm{cohesive} \to U_\mathrm{crisp}$$ 
+necessary to formalize the modalities 
+$$\sharp:U_\mathrm{cohesive} \to U_\mathrm{cohesive}$$
+$$\flat:U_\mathrm{crisp} \to U_\mathrm{crisp}$$
+$$\mathrm{shape}:U_\mathrm{cohesive} \to U_\mathrm{cohesive}$$
+
+\item the abstract continuum $\mathbf{R}:U_\mathrm{cohesive}$, which we shall assume for the time being to only be an arbitrary commutative ring, and the associated axiom $\mathbf{R} \flat$. This axiom already implies that $\mathbf{R}$ is a compact connected commutative ring. Alternatively, we could start with an abstract unit interval $\mathbf{I}:U_\mathrm{cohesive}$ and its associated axiom $\mathbf{I} \flat$, and then construct the abstract continuum out of the the abstract unit interval. 
+\end{itemize}
+
+\section{Real numbers}
+
+Real numbers are necessary in high school mathematics. This implies developing enough structure on $\mathbf{R}$ (field structure, strict order structure, lattice structure, convergence structure, Dedekind completeness, et cetera) so that $\mathbf{R}$ becomes the Dedekind real numbers. 
+
+\section{Elementary functions and the theory of equations}
+
+...
+
+\section{Euclidean geometry}
+
+...
+
+\section{Miscellaneous topics}
+
+...
+
+\end{document}
+
