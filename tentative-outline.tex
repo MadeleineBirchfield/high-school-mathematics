@@ -15,10 +15,22 @@ We work in cohesive homotopy type theory rather than plain homotopy type theory,
 
 \section{Foundations and synthetic topology}
 
-\begin{itemize}
-\item homotopy type theory, with an inductive identity type which only satisfies propositional identity elimination. This is so that the statements here are valid in all of Martin-Löf type theory, cubical type theory, and higher observational type theory, all of which have additional definitional equalities on its primary identity type. 
+We use agda notation, predicate logic notation [insert article reference to Charles Sanders Pierce], and arithmetic notation interchangeably for dependent pair and dependent function types: 
 
-\item the theory of univalent Tarski universes, propositional resizing, and modalities
+\begin{table}
+\centering
+\begin{tabular}{llll}
+Notation                & Agda notation                          & Predicate logic notation             & Arithmetic notation                     \\
+Interpretation           & Functions/pairs      & For all/there exists    &   Products/sums            \\
+Dependent function types & $(x : A) \to B(x)$    & $\Pi x:A.B(x)$    & $\prod_{x:A} B(x)$  \\
+Dependent pair types     & $(x : A) \times B(x)$ & $\Sigma x:A.B(x)$ & $\sum_{x:A} B(x)$   \\                 
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+\item dependent type theory introduced as follows: identity types, pair types, function types, dependent pair types, dependent function types, sum types, empty type, unit type, equivalences, and function extensionality. Also, a type of all propositions, which means that the theory is globally impredicative, as well as propositional truncation, which allows for predicate logic to be done, and set truncation. 
+
+\item the theory of univalent Tarski universes, predicativity (using types of locally small propositions instead of the type of all propositions), propositional resizing (local impredicativity), local excluded middle, universe of finite types and arithmetic of finite types, and modalities
 
 \item the Tarski universes $(U_\mathrm{crisp}, \mathrm{El}_\mathrm{crisp})$ representing crisp types and $(U_\mathrm{cohesive}, \mathrm{El}_\mathrm{cohesive})$ representing cohesive types, as well as functions 
 $$\mathrm{disc}:U_\mathrm{crisp} \hookrightarrow U_\mathrm{cohesive}$$ 
@@ -32,7 +44,7 @@ $$\mathrm{shape}:U_\mathrm{cohesive} \to U_\mathrm{cohesive}$$
 
 This approach is more similar to the earlier approach of Urs Schreiber and Michael Shulman in [insert article reference], compared to the later approach of Michael Shulman in [insert article reference]. 
 
-\item the abstract unit interval $\mathbf{I}:U_\mathrm{cohesive}$, which we shall assume for the time being to only be a type with two terms, and the associated axiom $\mathbf{I} \flat$. This axiom already implies that $\mathbf{I}$ is a compact connected, that it's shape is contractible. 
+\item the abstract unit interval $\mathbf{I}:U_\mathrm{cohesive}$, which we shall assume for the time being to only be a type with two non-equal terms, and the associated axiom $\mathbf{I} \flat$ (basically Shulman's axiom C2 for a family indexed by the unit type). This axiom already implies that $\mathbf{I}$ is compact connected and that it's shape is contractible. 
 
 \end{itemize}
 
