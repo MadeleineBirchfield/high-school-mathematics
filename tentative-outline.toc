@@ -4,3 +4,4 @@
 \contentsline {section}{\numberline {4}Elementary functions and the theory of equations}{2}{}%
 \contentsline {section}{\numberline {5}Euclidean geometry}{2}{}%
 \contentsline {section}{\numberline {6}Miscellaneous topics}{2}{}%
+\contentsline {section}{\numberline {7}Appendix}{2}{}%
