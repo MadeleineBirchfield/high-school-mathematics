@@ -28,7 +28,7 @@ Dependent pair types     & $(x : A) \times B(x)$ & $\Sigma x:A.B(x)$ & $\sum_{x:
 \end{table}
 
 \begin{itemize}
-\item dependent type theory introduced as follows: types, terms, dependent types, identity types, pair types, function types, dependent pair types, dependent function types, sum types, empty type, unit type, equivalences, function extensionality, transport, actions on identities, and heterogeneous identity tyeps. Also, a type of all propositions, which means that the theory is globally impredicative, as well as propositional truncation, which allows for predicate logic to be done. We use $:=$ informally to define terms and types, and relegate a formal definition of $:=$ to the appendix. 
+\item dependent type theory introduced as follows: types, terms, judgmental equality of types, dependent types, identity types, pair types, function types, dependent pair types, dependent function types, sum types, empty type, unit type, equivalences, function extensionality, transport, actions on identities, and heterogeneous identity types. Also, a type of all propositions, which means that the theory is globally impredicative, as well as propositional truncation, which allows for predicate logic to be done. There is no judgmental equality of terms, terms are instead defined using the identity type, and all computation rules are propositional. 
 
 \item the theory of univalent Tarski universes, predicativity in impredicative mathematics (using types of locally small propositions instead of the type of all propositions), propositional resizing (local impredicativity), local excluded middle, local "global" choice, universe of finite types and arithmetic of finite types, and modalities
 
@@ -63,12 +63,6 @@ We follow Peter Freyd [insert article reference] in defining $\mathbf{I}$ to be 
 \section{Miscellaneous topics}
 
 ...
-
-\section{Appendix}
-
-Formal type theory. Natural deduction. 
-
-Formal definitions: two approaches to formally defining the symbol $:=$ in type theory: propositional definitions, using identities of elements and equivalences of types, and judgmental definitions, using additional judgments representing judgmental equality of terms and of types. 
 
 \end{document}
 
